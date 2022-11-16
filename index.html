@@ -1,48 +1,148 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="zenika-theme.css" id="theme">
+	<link rel="stylesheet" href="node_modules/tailwindcss/tailwind.min.css" />
+	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style>
+		.head,
+		.mini-head {
+			font-size: 110%;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			transition: font-size 1s;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate id="title">
+				<div class="min-h-full min-w-full flex">
+					<div style="" class="p-8 flex flex-col justify-center">
+						<h1 style="font-size: 115%; text-transform: none; ">
+							L'argent 💰 ne fait pas le bonheur 💛, mais un bon logiciel de caisse 💳 écrit avec amour 💗
+							et
+							séniorité certainement 👍.
+						</h1>
+					</div>
+					<div class="p-8 flex flex-col items-center justify-center" style="min-width: 340px;">
+						<p>TechnoZaure<br />🐘 Nantes<br />2022 #2</p>
+						<img src="znk2.svg" class="w-32 h-32" />
+					</div>
+				</div>
+				<aside class="notes">
+					Bonjour :)
+				</aside>
+			</section>
+			<section>
+				<h1>Petite démo</h1>
+				<aside class="notes">
+					-Bonjour,
+					je voudrais un coca, deux crêpes nutella, une part quatre quart. Ah et puis non je vais prendre
+					plutôt une nutella et une beurre sucre.
+				</aside>
+			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="main-title">Pourquoi ce logiciel de caisse</div>
+			</section>
+			<section data-auto-animate>
+				<div class="mini-head" data-id="main-title">Pourquoi ce logiciel de caisse</div>
+				<div style="display: flex; flex-direction: row;">
+					<div>
+						<h2>Contexte</h2>
+						<p>Forum des associations</p>
+						<p>Buvette du forum</p>
+					</div>
+					<div>
+						<h2>Buvette</h2>
+						<p>Entre 70 et 100 clients</p>
+						<p>Additions à n'en plus finir<img src="./1540364982.svg" />
+						</p>
+						<p>TPE💳 avec saisie manuelle</p>
+					</div>
+				</div>
+				<aside class="notes">
+					Contexte : Forum des associations, comme dans toute la france à lieu le 1er samedi de septembre.
+
+					Constat d'une gestion de caisse dépassée. Faire une addition de tête, en faire une dizaine, en faire
+					une
+					centaine.
+					Beaucoup de personnes qui attendent → pression
+					Rendu de monnaie / Actions sur le TPE manuel
+					Calculs à la fin : Monnaie → recalcul du fond de caisse / TPE → capable de donner un total, mais pas
+					de détail.
+				</aside>
+			</section>
+			<section>
+				<h1>Utilisateurs</h1>
+				<div style="display: flex; flex-direction: column;">
+					<ul>
+						<li>Tech & non-tech</li>
+						<li>Jeunes & non-jeunes</li>
+					</ul>
+					<div>Objectif → Formation de l'utilisateur minimale</div>
+					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est que ce n'est pas bon.</div>
+					<div>Formation initiale : 10 min / Succédé par des formation en pair à pair</div>
+				</div>
+				<aside class="notes">
+					Tech et non tech. Jeunes et non Jeunes.
+					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes
+					utilisateurs.
+					Les IHM sont commes les blagues → Si besoin d'expliquer c'est que c'est pas bon.
+
+					Formation initiale, mais aussi la formation en pair à pair.
+				</aside>
+			</section>
+			<section>
+				<h1>Quels aspects ont été pris en compte</h1>
+				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.</aside>
+			</section>
+			<section>
+				<h1>Séniorité rime avec priorités</h1>
+				<aside class="notes"></aside>
+			</section>
+			<section>
+				<h1>Le hardware</h1>
+				<aside class="notes"></aside>
+			</section>
+			<section>
+				<h1>Petit bilan après le baptême du feu</h1>
+				<aside class="notes"></aside>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
