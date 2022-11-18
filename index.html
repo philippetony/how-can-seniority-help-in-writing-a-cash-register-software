@@ -65,6 +65,11 @@
 				<div class="mini-head" data-id="main-title">Pourquoi ce logiciel de caisse</div>
 				<div style="display: flex; flex-direction: row;">
 					<div>
+						<h2>Existant ?</h2>
+						<p>Rien de concluant</p>
+						<p>1 ERP, une solution en client lourd</p>
+					</div>
+					<div>
 						<h2>Contexte</h2>
 						<p>Forum des associations</p>
 						<p>Buvette du forum</p>
@@ -87,10 +92,15 @@
 					Rendu de monnaie / Actions sur le TPE manuel
 					Calculs à la fin : Monnaie → recalcul du fond de caisse / TPE → capable de donner un total, mais pas
 					de détail.
+					Quelques chiffres : 
+						centaine clients
+						1500€ de CA
+						150 galettes vendues
+						2 bilig (→ 4 en 2022)
 				</aside>
 			</section>
 			<section>
-				<h1>Utilisateurs</h1>
+				<h1>Utilisateurs et formation utilisateur</h1>
 				<div style="display: flex; flex-direction: column;">
 					<ul>
 						<li>Tech & non-tech</li>
@@ -102,8 +112,7 @@
 				</div>
 				<aside class="notes">
 					Tech et non tech. Jeunes et non Jeunes.
-					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes
-					utilisateurs.
+					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes utilisateurs. Même si j'aime donner des formations, 'idée c'était d'éviter d'avoir trop à en donner cette fois.
 					Les IHM sont commes les blagues → Si besoin d'expliquer c'est que c'est pas bon.
 
 					Formation initiale, mais aussi la formation en pair à pair.
@@ -111,19 +120,57 @@
 			</section>
 			<section>
 				<h1>Quels aspects ont été pris en compte</h1>
-				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.</aside>
+				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.
+
+					En secondaire : produits modulables/editable (pas de crêpes à chaque utilisation, ou certains nouveau produits à certaines occasions).
+				</aside>
 			</section>
 			<section>
 				<h1>Séniorité rime avec priorités</h1>
-				<aside class="notes"></aside>
+				<aside class="notes">
+					Environ 3jh (24hh) pour la 1ère version. 2jh (16hh) pour la v2.
+					L'objectif principal : connexion au TPE, réalisé avant de commencer le logiciel de caisse.
+				</aside>
 			</section>
 			<section>
 				<h1>Le hardware</h1>
-				<aside class="notes"></aside>
+				<aside class="notes">
+					Contexte technique : pas d'internet fixe. Du courant. Un TPE qui a besoin d'internet via de l'ethernet.
+					Connexion relativement faible, mais stable. 
+					→ Modem 4G filaire+wifi
+					Ou un AP Wifi + smartphone en partage de connexion
+					Un Raspberry
+					Un écran tactile 15"
+				</aside>
+			</section>
+			<section>
+				<h1>La fonction préparation de commande</h1>
+				<aside class="notes">
+					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une personne dont le rôle est de préparer les crêpes dans l'ordre d'arrivé des commandes.
+					(La jambon fromage c'est pour qui ?)
+					La personne doit surveiller/gérer la remise des crêpes au personnes qui attendent et répondre à l'éternel "Je fais quoi ensuite ?" de la personne au bilig.
+					C'est une FIFO de commandes de galettes/crêpes.
+					
+					L'idée c'est de sélectionner les produits achetés (et payés ^^) qui ont besoin de rentrer dans la liste. Ensuite on affiche la liste et on indique si c'est en cours, ou terminé (et hop la crêpe disparait).
+					Un très mince affichage du n° de commande, le produit commandé, et 2 boutons d'état.
+
+					Un affichage sur téléphone, tablette, ou l'écran tactile pour voir en temps réel les commandes qui viennent d'arriver.
+					Et là, j'ai l'impression de réinventer un fast-food... mais qui fait des crêpes.
+					Copie d'écran de Papa's sushi.
+				</aside>
 			</section>
 			<section>
 				<h1>Petit bilan après le baptême du feu</h1>
-				<aside class="notes"></aside>
+				<aside class="notes">
+					Tout s'est bien passé. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud (aspect répétitif des commandes). 
+					Un rush de 11h50 à 14h30
+					Un système approuvé par tout le monde.
+
+					Améliorations à prévoir :
+					Affichage plus clair des commandes en prépa commande
+					Sécuriser enfin les accès
+					Documenter les branchements.
+				</aside>
 			</section>
 		</div>
 	</div>
