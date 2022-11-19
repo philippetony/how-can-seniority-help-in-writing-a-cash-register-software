@@ -11,20 +11,97 @@
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css">
 	<link rel="stylesheet" href="zenika-theme.css" id="theme">
-	<link rel="stylesheet" href="node_modules/tailwindcss/tailwind.min.css" />
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	<style>
+		h1 {
+			font-family: Nunito;
+			font-size: 24px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 700;
+			line-height: 26.4px;
+		}
+
+		h3 {
+			font-family: Nunito;
+			font-size: 14px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 700;
+			line-height: 15.4px;
+		}
+
+		p {
+			font-family: Nunito;
+			font-size: 14px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 400;
+			line-height: 20px;
+		}
+
+		blockquote {
+			font-family: Nunito;
+			font-size: 21px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 400;
+			line-height: 30px;
+		}
+
+		pre {
+			font-family: Nunito;
+			font-size: 13px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 400;
+			line-height: 18.5714px;
+		}
+
 		.head,
 		.mini-head {
-			font-size: 110%;
+			/* font-size: 2rem; */
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			/* transition: font-size 1s; */
+		}
+
+		.mini-head {
+			font-size: 1.3rem;
+			opacity: 0.7;
+		}
+
+		.subhead {
 			text-transform: uppercase;
 			font-weight: 700;
 			letter-spacing: 0.1em;
 			transition: font-size 1s;
+		}
+
+		.social {
+			font-size: 13pt;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.social img {
+			max-height: 4rem;
+			border-radius: 50%;
+		}
+
+		.social>div {
+			text-align: left;
+		}
+		.big-emoji{
+			font-size: 2rem;
 		}
 	</style>
 </head>
@@ -33,25 +110,44 @@
 	<div class="reveal">
 		<div class="slides">
 			<section data-auto-animate id="title">
-				<div class="min-h-full min-w-full flex">
-					<div style="" class="p-8 flex flex-col justify-center">
-						<h1 style="font-size: 115%; text-transform: none; ">
-							L'argent 💰 ne fait pas le bonheur 💛, mais un bon logiciel de caisse 💳 écrit avec amour 💗
-							et
-							séniorité certainement 👍.
-						</h1>
-					</div>
-					<div class="p-8 flex flex-col items-center justify-center" style="min-width: 340px;">
-						<p>TechnoZaure<br />🐘 Nantes<br />2022 #2</p>
-						<img src="znk2.svg" class="w-32 h-32" />
-					</div>
-				</div>
-				<aside class="notes">
-					Bonjour :)
-				</aside>
+				<div class="min-h-full min-w-full flex flex-col">
+					<svg viewBox="0 0 420 130">
+						<text x="40" y="50" style="fill: white; font-size:18px; font-weight: 700;">L'argent 💰 ne fait
+							pas le bonheur 💛,</text>
+						<text x="0" y="80" style="fill: white; font-size:18px; font-weight: 700;">mais un bon logiciel
+							de caisse 💳 certainement 👍.</text>
+						<text x="155" y="120"
+							style="fill: white; font-size:13px; font-weight: 700; font-style: italic;">(écrit avec amour
+							💗 et séniorité)</text>
+						<line x1="350" y1="105" x2="270" y2="82" style="stroke: white;" />
+						<line x1="160" y1="105" x2="268" y2="82" style="stroke: white;" />
+					</svg>
+					<divv>
+						<div class="p-8 flex items-center justify-center gap-6" style="min-width: 340px;">
+							<div>
+								🐘
+							</div>
+							<div>
+								<p>TechnoZaure<br /> Nantes 2022 #2<br />Track Tech</p>
+							</div>
+							<div>
+								<img src="znk2.svg" class="w-32 h-32" />
+							</div>
+							<div class="social">
+								<img src="./philippe.png" />
+								<div>
+									<i class="fa-brands fa-twitter"></i> PhilTheTea <br />
+									<i class="fa-brands fa-github"></i> philippetony
+								</div>
+							</div>
+						</div>
+					</divv>
+					<aside class="notes">
+						Bonjour :)
+					</aside>
 			</section>
 			<section>
-				<h1>Petite démo</h1>
+				<div class="head">Petite démo</div>
 				<aside class="notes">
 					-Bonjour,
 					je voudrais un coca, deux crêpes nutella, une part quatre quart. Ah et puis non je vais prendre
@@ -59,27 +155,35 @@
 				</aside>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="main-title">Pourquoi ce logiciel de caisse</div>
+				<div class="head" data-id="main-title">Pourquoi ce logiciel de caisse ?</div>
 			</section>
 			<section data-auto-animate>
-				<div class="mini-head" data-id="main-title">Pourquoi ce logiciel de caisse</div>
-				<div style="display: flex; flex-direction: row;">
+				<div class="mini-head" data-id="main-title">Pourquoi ce logiciel de caisse ?</div>
+				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: space-between;">
 					<div>
-						<h2>Existant ?</h2>
-						<p>Rien de concluant</p>
-						<p>1 ERP, une solution en client lourd</p>
-					</div>
-					<div>
-						<h2>Contexte</h2>
+						<div class="subhead">Contexte</div>
 						<p>Forum des associations</p>
-						<p>Buvette du forum</p>
+						<p>Buvette du forum (avec restauration)</p>
 					</div>
 					<div>
-						<h2>Buvette</h2>
-						<p>Entre 70 et 100 clients</p>
-						<p>Additions à n'en plus finir<img src="./1540364982.svg" />
-						</p>
-						<p>TPE💳 avec saisie manuelle</p>
+						<div class="subhead">Buvette</div>
+						<p><span class="big-emoji">🛒</span>Entre 70 et 100 clients</p>
+						<div class="flex flew-row justify-center items-center gap-2">
+							<img src="./1540364982.svg" style="max-height: 2rem;" />
+							<p>Additions à n'en plus finir</p>
+						</div>
+						<p><span class="big-emoji">💳</span>TPE avec saisie manuelle</p>
+					</div>
+					<div>
+						<div class="subhead">Besoin</div>
+						<p>Faciliter les calculs</p>
+						<p>Communiquer avec le TPE</p>
+						<p>Historisation des transactions (→ comptabilité)</p>
+					</div>
+					<div>
+						<div class="subhead">Existant</div>
+						<p>1 ERP (odoo), une solution en client lourd ...</p>
+						<p>Rien de concluant</p>
 					</div>
 				</div>
 				<aside class="notes">
@@ -92,11 +196,11 @@
 					Rendu de monnaie / Actions sur le TPE manuel
 					Calculs à la fin : Monnaie → recalcul du fond de caisse / TPE → capable de donner un total, mais pas
 					de détail.
-					Quelques chiffres : 
-						centaine clients
-						1500€ de CA
-						150 galettes vendues
-						2 bilig (→ 4 en 2022)
+					Quelques chiffres :
+					centaine clients
+					1500€ de CA
+					150 galettes vendues
+					2 bilig (→ 4 en 2022)
 				</aside>
 			</section>
 			<section>
@@ -107,12 +211,15 @@
 						<li>Jeunes & non-jeunes</li>
 					</ul>
 					<div>Objectif → Formation de l'utilisateur minimale</div>
-					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est que ce n'est pas bon.</div>
+					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est
+						que ce n'est pas bon.</div>
 					<div>Formation initiale : 10 min / Succédé par des formation en pair à pair</div>
 				</div>
 				<aside class="notes">
 					Tech et non tech. Jeunes et non Jeunes.
-					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes utilisateurs. Même si j'aime donner des formations, 'idée c'était d'éviter d'avoir trop à en donner cette fois.
+					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes
+					utilisateurs. Même si j'aime donner des formations, 'idée c'était d'éviter d'avoir trop à en donner
+					cette fois.
 					Les IHM sont commes les blagues → Si besoin d'expliquer c'est que c'est pas bon.
 
 					Formation initiale, mais aussi la formation en pair à pair.
@@ -122,7 +229,8 @@
 				<h1>Quels aspects ont été pris en compte</h1>
 				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.
 
-					En secondaire : produits modulables/editable (pas de crêpes à chaque utilisation, ou certains nouveau produits à certaines occasions).
+					En secondaire : produits modulables/editable (pas de crêpes à chaque utilisation, ou certains
+					nouveau produits à certaines occasions).
 				</aside>
 			</section>
 			<section>
@@ -135,8 +243,9 @@
 			<section>
 				<h1>Le hardware</h1>
 				<aside class="notes">
-					Contexte technique : pas d'internet fixe. Du courant. Un TPE qui a besoin d'internet via de l'ethernet.
-					Connexion relativement faible, mais stable. 
+					Contexte technique : pas d'internet fixe. Du courant. Un TPE qui a besoin d'internet via de
+					l'ethernet.
+					Connexion relativement faible, mais stable.
 					→ Modem 4G filaire+wifi
 					Ou un AP Wifi + smartphone en partage de connexion
 					Un Raspberry
@@ -146,15 +255,20 @@
 			<section>
 				<h1>La fonction préparation de commande</h1>
 				<aside class="notes">
-					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une personne dont le rôle est de préparer les crêpes dans l'ordre d'arrivé des commandes.
+					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une
+					personne dont le rôle est de préparer les crêpes dans l'ordre d'arrivé des commandes.
 					(La jambon fromage c'est pour qui ?)
-					La personne doit surveiller/gérer la remise des crêpes au personnes qui attendent et répondre à l'éternel "Je fais quoi ensuite ?" de la personne au bilig.
+					La personne doit surveiller/gérer la remise des crêpes au personnes qui attendent et répondre à
+					l'éternel "Je fais quoi ensuite ?" de la personne au bilig.
 					C'est une FIFO de commandes de galettes/crêpes.
-					
-					L'idée c'est de sélectionner les produits achetés (et payés ^^) qui ont besoin de rentrer dans la liste. Ensuite on affiche la liste et on indique si c'est en cours, ou terminé (et hop la crêpe disparait).
+
+					L'idée c'est de sélectionner les produits achetés (et payés ^^) qui ont besoin de rentrer dans la
+					liste. Ensuite on affiche la liste et on indique si c'est en cours, ou terminé (et hop la crêpe
+					disparait).
 					Un très mince affichage du n° de commande, le produit commandé, et 2 boutons d'état.
 
-					Un affichage sur téléphone, tablette, ou l'écran tactile pour voir en temps réel les commandes qui viennent d'arriver.
+					Un affichage sur téléphone, tablette, ou l'écran tactile pour voir en temps réel les commandes qui
+					viennent d'arriver.
 					Et là, j'ai l'impression de réinventer un fast-food... mais qui fait des crêpes.
 					Copie d'écran de Papa's sushi.
 				</aside>
@@ -162,7 +276,8 @@
 			<section>
 				<h1>Petit bilan après le baptême du feu</h1>
 				<aside class="notes">
-					Tout s'est bien passé. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud (aspect répétitif des commandes). 
+					Tout s'est bien passé. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud (aspect
+					répétitif des commandes).
 					Un rush de 11h50 à 14h30
 					Un système approuvé par tout le monde.
 
