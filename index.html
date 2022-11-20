@@ -17,52 +17,8 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<script src="qrcodejs/qrcode.min.js"></script>
 	<style>
-		h1 {
-			font-family: Nunito;
-			font-size: 24px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 700;
-			line-height: 26.4px;
-		}
-
-		h3 {
-			font-family: Nunito;
-			font-size: 14px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 700;
-			line-height: 15.4px;
-		}
-
-		p {
-			font-family: Nunito;
-			font-size: 14px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 400;
-			line-height: 20px;
-		}
-
-		blockquote {
-			font-family: Nunito;
-			font-size: 21px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 400;
-			line-height: 30px;
-		}
-
-		pre {
-			font-family: Nunito;
-			font-size: 13px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 400;
-			line-height: 18.5714px;
-		}
-
 		.head,
 		.mini-head {
 			/* font-size: 2rem; */
@@ -104,6 +60,25 @@
 		.big-emoji {
 			font-size: 2rem;
 		}
+
+		#qrcode {
+			margin: 0;
+			padding: 0;
+		}
+
+		#qrcode img {
+			margin: 0;
+			padding: 0;
+		}
+
+		.bg-white {
+			padding: 2 rem;
+		}
+
+		.small{
+			font-size: 10pt;
+		}
+
 	</style>
 </head>
 
@@ -124,11 +99,11 @@
 						<line x1="160" y1="105" x2="268" y2="82" style="stroke: white;" />
 					</svg>
 					<divv>
-						<div class="p-8 flex items-center justify-center gap-6" style="min-width: 340px;">
+						<div class="p-8 flex flex-row items-center justify-center gap-12 headers" style="min-width: 340px;">
 							<div>
 								🐘
 							</div>
-							<div>
+							<div class="small">
 								<p>TechnoZaure<br /> Nantes 2022 #2<br />Track Tech</p>
 							</div>
 							<div>
@@ -149,36 +124,6 @@
 			</section>
 			<section data-auto-animate>
 				<div class="head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
-			</section>
-			<section data-auto-animate>
-				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
-				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: space-between;">
-					<div>
-						<div class="subhead">Contexte</div>
-						<p>Forum des associations</p>
-						<p>Buvette du forum (avec restauration)</p>
-					</div>
-					<div>
-						<div class="subhead">Buvette</div>
-						<p><span class="big-emoji">🛒</span>Entre 70 et 100 clients</p>
-						<div class="flex flew-row justify-center items-center gap-2">
-							<img src="./1540364982.svg" style="max-height: 2rem;" />
-							<p>Additions à n'en plus finir</p>
-						</div>
-						<p><span class="big-emoji">💳</span>TPE avec saisie manuelle</p>
-					</div>
-					<div>
-						<div class="subhead">Besoin</div>
-						<p>Faciliter les calculs</p>
-						<p>Communiquer avec le TPE</p>
-						<p>Historisation des transactions (→ comptabilité)</p>
-					</div>
-					<div>
-						<div class="subhead">Existant</div>
-						<p>1 ERP (odoo), une solution en client lourd ...</p>
-						<p>Rien de concluant</p>
-					</div>
-				</div>
 				<aside class="notes">
 					Contexte : Forum des associations, comme dans toute la france à lieu le 1er samedi de septembre.
 
@@ -197,18 +142,53 @@
 				</aside>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="main-title">Quels aspects et besoins ont été pris en compte</div>
+				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
+				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: center; ">
+					<div>
+						<div class="subhead">Contexte</div>
+						<p class="fragment">Forum des associations</p>
+						<p class="fragment">Buvette du forum (avec restauration)</p>
+					</div>
+					<div>
+						<div class="subhead fragment">Buvette</div>
+						<p class="fragment"><span class="big-emoji">🛒</span>Entre 70 et 100 clients</p>
+						<div class="fragment flex flew-row justify-center items-center gap-2">
+							<img src="./1540364982.svg" style="max-height: 2rem;" />
+							<p>Additions à n'en plus finir</p>
+						</div>
+						<p class="fragment"><span class="big-emoji">💳</span>TPE avec saisie manuelle</p>
+					</div>
+				</div>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="main-title">Quels aspects et besoins ont été pris en compte</div>
+				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
+				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: center;">
+					<div>
+						<div class="subhead">Besoin</div>
+						<p class="fragment">Faciliter les calculs</p>
+						<p class="fragment">Communiquer avec le TPE</p>
+						<p class="fragment">Historisation des transactions (→&nbsp;comptabilité)</p>
+					</div>
+					<div>
+						<div class="subhead fragment">Existant</div>
+						<p class="fragment">1 ERP (odoo), une solution en client lourd ...</p>
+						<p class="fragment">Rien de concluant</p>
+					</div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Quels aspects et besoins ont été pris en compte</div>
+			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Quels aspects et besoins ont été pris en compte</div>
 				<ul>
-					<li>Besoin comptable</li>
-					<li>Facilité d'utilisation</li>
-					<li>Connexion au TPE</li>
-					<li>Responsivité (multi-device)</li>
+					<li class="fragment">Besoin comptable</li>
+					<li class="fragment">Facilité d'utilisation</li>
+					<li class="fragment">Connexion au TPE</li>
+					<li class="fragment">Responsivité (multi-device)</li>
 					<br />
-					<li>Produits modulables/editables</li>
-					<li>Statistiques sur les ventes</li>
+					<li class="fragment">Produits catégorisables/éditables</li>
+					<li class="fragment">Statistiques sur les ventes</li>
 				</ul>
 				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.
 
@@ -220,25 +200,26 @@
 				<div class="head">Utilisateurs et formation</div>
 				<div style="display: flex; flex-direction: column;">
 					<ul>
-						<li>Tech & non-tech</li>
-						<li>Jeunes & non-jeunes</li>
+						<li class="fragment">Tech & non-tech</li>
+						<li class="fragment">Jeunes & non-jeunes</li>
 					</ul>
-					<div>Objectif : Formation de l'utilisateur minimale</div>
 					<br />
-					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est
-						que ce n'est pas bon.</div>
+					<div class="fragment">Objectif : Formation de l'utilisateur minimale</div>
 					<br />
-					<div>Résultat : <br>Formation initiale : 10 min / Succédé par des formation en pair à pair</div>
+					<div class="fragment">Résultat : <br>Formation initiale → 10 min <br /> Succédée par des formations
+						en pair à pair</div>
 				</div>
 				<aside class="notes">
-					Tech et non tech. Jeunes et non Jeunes.
 					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes
 					utilisateurs. Même si j'aime donner des formations, 'idée c'était d'éviter d'avoir trop à en donner
 					cette fois.
-					Les IHM sont commes les blagues → Si besoin d'expliquer c'est que c'est pas bon.
-
-					Formation initiale, mais aussi la formation en pair à pair.
 				</aside>
+			</section>
+			<section>
+				<div style="display: flex; flex-direction: column;">
+					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est
+						que ce n'est pas bon.</div>
+				</div>
 			</section>
 
 			<section>
@@ -249,13 +230,13 @@
 					plutôt une nutella et une beurre sucre.
 				</aside>
 			</section>
-			<section>
-				<div class="head">Séniorité rime avec priorités</div>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Séniorité rime avec ... priorités</div>
 			</section>
-			<section>
-				<div class="head">Séniorité rime avec priorités</div>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Séniorité rime avec ... priorités</div>
 				<ul>
-					<li>
+					<li class="fragment">
 						Temps de dev faible : <br />
 						<svg viewBox="0 0 300 40" style="font-size: 14pt; fill: white; ">
 							<defs>
@@ -266,18 +247,22 @@
 							</defs>
 							<text x="0" y="30">✨</text>
 							<line x1="40" y1="25" x2="100" y2="25" marker-end="url(#arrowhead)" stroke="white" />
-							<text x="52" y="20" style="font-size: 10pt; stroke: none;" class="fragment">3 j.h.</text>
 							<text x="120" y="30">🔖v1</text>
-							<line x1="180" y1="25" x2="230" y2="25" marker-end="url(#arrowhead)" stroke="white" />
-							<text x="192" y="20" style="font-size: 10pt; stroke: none;">2 j.h.</text>
-							<text x="250" y="30">🔖v2</text>
+							<text x="52" y="20" style="font-size: 10pt; stroke: none;" class="fragment">3 j.h.</text>
+							<g class="fragment">
+								<line x1="180" y1="25" x2="230" y2="25" marker-end="url(#arrowhead)" stroke="white" />
+								<text x="250" y="30">🔖v2</text>
+							</g>
+							<text x="192" y="20" style="font-size: 10pt; stroke: none;" class="fragment">2 j.h.</text>
 						</svg>
 					</li>
-					<li>
-						Focus sur les objectifs principaux : connexion TPE
+					<li class="fragment">
+						Focus sur les objectifs principaux et les plus complexes : connexion avec le TPE
 					</li>
-					<li>
-						Impasses : Sécurisation, branding open-source, nommage, tests ...
+					<li class="fragment">
+						Impasses<span class="fragment"> : Sécurisation</span><span class="fragment">, branding
+							open-source</span><span class="fragment">, nommage du projet</span><span class="fragment">,
+							tests ...</span>
 					</li>
 				</ul>
 
@@ -294,13 +279,32 @@
 					Nommage : s'appelle caisse, pas forcément le plus vendeur pour retrouver le projet.
 				</aside>
 			</section>
-			<section>
-				<div class="head">Seniorité vs juniorité</div>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Séniorité rime avec ... diversité</div>
 				<ul>
-					<li>Problème simpliste</li>
-					<img src="database.png" />
-					<li>Efficacité</li>
-					<li>Choix des technos</li>
+					<li class="fragment">
+						Choix de prendre plusieurs technos adaptées à différents besoins :
+						<ul>
+							<li class="fragment">Python → bas niveau + facilité à créer une api REST (pysocket + flask)
+							</li>
+							<li class="fragment">PHP → Objectif à long terme d'héberger l'outil sur un hébergement
+								mutualisé</li>
+							<li class="fragment">React → <em>parce que, pourquoi pas ?</em></li>
+						</ul>
+					</li class="fragment">
+				</ul>
+
+				<aside class="notes">
+
+				</aside>
+			</section>
+			<section data-auto-animate="">
+				<div class="head" data-id="title">Seniorité rime avec ... juniorité</div>
+				<ul>
+					<li class="fragment">Problème simpliste</li>
+					<img src="database.png" class="fragment" />
+					<li class="fragment">Efficacité</li>
+					<li class="fragment">Choix des technos</li>
 				</ul>
 				<aside class="notes">
 					Problème simpliste : 4 tables.
@@ -331,8 +335,12 @@
 					Un écran tactile 15"
 				</aside>
 			</section>
-			<section>
-				<h1>La fonction préparation de commande</h1>
+			<section data-auto-animate>
+				<div class="head" data-id="title">La fonction préparation de commande</div>
+			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="title">La fonction préparation de commande</div>
+				<img src="preparation-commande.excalidraw.png" />
 				<aside class="notes">
 					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une
 					personne dont le rôle est de préparer les crêpes dans l'ordre d'arrivé des commandes.
@@ -352,8 +360,20 @@
 					Copie d'écran de Papa's sushi.
 				</aside>
 			</section>
-			<section>
-				<h1>Petit bilan après le baptême du feu</h1>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Petit bilan après le baptême du feu 🔥</div>
+				<ul>
+					<li class="fragment">
+						Tout s'est bien passé 👍. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud
+						(lié à l'aspect répétitif des commandes).
+					</li class="fragment">
+					<li class="fragment">
+						Un rush de 11h50 à 14h30 😅
+					</li>
+					<li class="fragment">
+						Un système approuvé par tout le monde 😎
+					</li>
+				</ul>
 				<aside class="notes">
 					Tout s'est bien passé. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud (aspect
 					répétitif des commandes).
@@ -366,6 +386,75 @@
 					Documenter les branchements.
 				</aside>
 			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Petit bilan après le baptême du feu 🔥</div>
+				<div>Améliorations à prévoir :</div>
+				<ul>
+					<li class="fragment">
+						Affichage plus marqué des commandes et des produits associés en prépa commande
+					</li>
+					<li class="fragment">
+						Sécuriser enfin les accès (OAuth2)
+					</li>
+					<li class="fragment">
+						Documenter les branchements des différents morceaux du hardware
+					</li>
+				</ul>
+				<aside class="notes">
+					Tout s'est bien passé. Seules 3 crêpes ont été préparées en trop. Deux gros coup de chaud (aspect
+					répétitif des commandes).
+					Un rush de 11h50 à 14h30
+					Un système approuvé par tout le monde.
+
+					Améliorations à prévoir :
+					Affichage plus clair des commandes en prépa commande
+					Sécuriser enfin les accès
+					Documenter les branchements.
+				</aside>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h1>Questions ?</h1>
+					<aside class="notes"></aside>
+				</section>
+				<aside class="notes"></aside>
+			</section>
+			<section>
+				<h2 style="text-transform: none;">Merci</h2>
+				<div style="display:flex; flex-direction: row; align-content: space-between; align-items: center;">
+					<div
+						style="display:flex; flex-direction: column; align-content: flex-start; align-items: center; flex:1;">
+						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" src="philippe.png" />
+						<p class="text-2xl">Philippe TONY</p>
+						<p class="text-xl"><i class="fab fa-github"></i>philippetony<br /><i
+								class="fa-brands fa-twitter"></i>PhilTheTea</p>
+						<p class="text-2xl">Développeur / Formateur <br />@ Zenika Nantes 🐘</p>
+					</div>
+					<div style="display:flex; flex-direction: column; align-items: center; flex:1; font-size: 50%;">
+
+						<!-- <div style="border-bottom: 3px solid #333; align-self: stretch; margin: 1em;"></div> -->
+						<p>
+							Slides :
+						</p>
+						<div class="bg-white" style="flex:auto; padding: 0.3em;">
+							<span id="qrcode" class="no-border"></span>
+						</div>
+						<p style="font-size: 80%;">
+							https://github.com/philippetony/how-can-seniority-help-in-writing-a-cash-register-software
+						</p>
+						<script>
+							new QRCode(document.getElementById("qrcode"), {
+								colorLight: '#fff',
+								colorDark: '#191919',
+								height: 256,
+								width: 256,
+								text: "https://github.com/philippetony/how-can-seniority-help-in-writing-a-cash-register-software"
+							});
+						</script>
+					</div>
+				</div>
+				<aside class="notes"></aside>
+			</section>
 		</div>
 	</div>
 
@@ -373,12 +462,27 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
+	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
+			allottedTime: 20 * 60 * 1000, // 20 minutes
+			//barColor: 'rgb(181, 20, 49)',
+			barColor: 'rgb(225, 20, 49)',
+			keyboard: {
+				// pause/resume time when Enter is pressed
+				13: () => {
+					ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause();
+				},
+				// reset timer when 'r' is pressed
+				82: () => {
+					ElapsedTimeBar.reset();
+				}
+			},
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
