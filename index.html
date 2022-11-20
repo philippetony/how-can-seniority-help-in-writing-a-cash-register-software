@@ -100,7 +100,8 @@
 		.social>div {
 			text-align: left;
 		}
-		.big-emoji{
+
+		.big-emoji {
 			font-size: 2rem;
 		}
 	</style>
@@ -146,19 +147,11 @@
 						Bonjour :)
 					</aside>
 			</section>
-			<section>
-				<div class="head">Petite démo</div>
-				<aside class="notes">
-					-Bonjour,
-					je voudrais un coca, deux crêpes nutella, une part quatre quart. Ah et puis non je vais prendre
-					plutôt une nutella et une beurre sucre.
-				</aside>
+			<section data-auto-animate>
+				<div class="head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="main-title">Pourquoi ce logiciel de caisse ?</div>
-			</section>
-			<section data-auto-animate>
-				<div class="mini-head" data-id="main-title">Pourquoi ce logiciel de caisse ?</div>
+				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
 				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: space-between;">
 					<div>
 						<div class="subhead">Contexte</div>
@@ -203,17 +196,39 @@
 					2 bilig (→ 4 en 2022)
 				</aside>
 			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="main-title">Quels aspects et besoins ont été pris en compte</div>
+			</section>
+			<section data-auto-animate>
+				<div class="head" data-id="main-title">Quels aspects et besoins ont été pris en compte</div>
+				<ul>
+					<li>Besoin comptable</li>
+					<li>Facilité d'utilisation</li>
+					<li>Connexion au TPE</li>
+					<li>Responsivité (multi-device)</li>
+					<br />
+					<li>Produits modulables/editables</li>
+					<li>Statistiques sur les ventes</li>
+				</ul>
+				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.
+
+					En secondaire : produits modulables/editable (pas de crêpes à chaque utilisation, ou certains
+					nouveau produits à certaines occasions).
+				</aside>
+			</section>
 			<section>
-				<h1>Utilisateurs et formation utilisateur</h1>
+				<div class="head">Utilisateurs et formation</div>
 				<div style="display: flex; flex-direction: column;">
 					<ul>
 						<li>Tech & non-tech</li>
 						<li>Jeunes & non-jeunes</li>
 					</ul>
-					<div>Objectif → Formation de l'utilisateur minimale</div>
+					<div>Objectif : Formation de l'utilisateur minimale</div>
+					<br />
 					<div style="font-style: italic;">Une IHM est comme une blague, s'il y a besoin de l'expliquer, c'est
 						que ce n'est pas bon.</div>
-					<div>Formation initiale : 10 min / Succédé par des formation en pair à pair</div>
+					<br />
+					<div>Résultat : <br>Formation initiale : 10 min / Succédé par des formation en pair à pair</div>
 				</div>
 				<aside class="notes">
 					Tech et non tech. Jeunes et non Jeunes.
@@ -225,23 +240,87 @@
 					Formation initiale, mais aussi la formation en pair à pair.
 				</aside>
 			</section>
-			<section>
-				<h1>Quels aspects ont été pris en compte</h1>
-				<aside class="notes">Besoin comptable, besoin de facilité d'utilisation, connexion au TPE.
 
-					En secondaire : produits modulables/editable (pas de crêpes à chaque utilisation, ou certains
-					nouveau produits à certaines occasions).
+			<section>
+				<div class="head">Petite démo</div>
+				<aside class="notes">
+					-Bonjour,
+					je voudrais un coca, deux crêpes nutella, une part quatre quart. Ah et puis non je vais prendre
+					plutôt une nutella et une beurre sucre.
 				</aside>
 			</section>
 			<section>
-				<h1>Séniorité rime avec priorités</h1>
+				<div class="head">Séniorité rime avec priorités</div>
+			</section>
+			<section>
+				<div class="head">Séniorité rime avec priorités</div>
+				<ul>
+					<li>
+						Temps de dev faible : <br />
+						<svg viewBox="0 0 300 40" style="font-size: 14pt; fill: white; ">
+							<defs>
+								<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+									orient="auto">
+									<polygon points="0 0, 10 3.5, 0 7" />
+								</marker>
+							</defs>
+							<text x="0" y="30">✨</text>
+							<line x1="40" y1="25" x2="100" y2="25" marker-end="url(#arrowhead)" stroke="white" />
+							<text x="52" y="20" style="font-size: 10pt; stroke: none;" class="fragment">3 j.h.</text>
+							<text x="120" y="30">🔖v1</text>
+							<line x1="180" y1="25" x2="230" y2="25" marker-end="url(#arrowhead)" stroke="white" />
+							<text x="192" y="20" style="font-size: 10pt; stroke: none;">2 j.h.</text>
+							<text x="250" y="30">🔖v2</text>
+						</svg>
+					</li>
+					<li>
+						Focus sur les objectifs principaux : connexion TPE
+					</li>
+					<li>
+						Impasses : Sécurisation, branding open-source, nommage, tests ...
+					</li>
+				</ul>
+
 				<aside class="notes">
 					Environ 3jh (24hh) pour la 1ère version. 2jh (16hh) pour la v2.
+					V1 : gestion des ventes et prépa commande et tpe
+					V2 : qqs améliorations + partie administration des produits
+
 					L'objectif principal : connexion au TPE, réalisé avant de commencer le logiciel de caisse.
+
+					Sécurisation → réseau local. Prévu pour intégrer un open-id.
+					Branding opensource minimal (il y a un README). manque tout le reste CONTRIBUTING, issues, good
+					first issues.
+					Nommage : s'appelle caisse, pas forcément le plus vendeur pour retrouver le projet.
 				</aside>
 			</section>
 			<section>
-				<h1>Le hardware</h1>
+				<div class="head">Seniorité vs juniorité</div>
+				<ul>
+					<li>Problème simpliste</li>
+					<img src="database.png" />
+					<li>Efficacité</li>
+					<li>Choix des technos</li>
+				</ul>
+				<aside class="notes">
+					Problème simpliste : 4 tables.
+					Un junior arriverait au même résultat.
+					Back : 315 lignes de php, (390 avec le init de la bdd)
+					Driver TPE : 314 lignes
+					Front React : bcp plus de lignes
+				</aside>
+			</section>
+			<section>
+				<div class="head">Architecture software</div>
+				<div class="flex flex-row justify-center">
+					<img src="architecture.excalidraw.png" />
+				</div>
+			</section>
+			<section>
+				<div class="head">Architecture hardware</div>
+				<div class="flex flex-row justify-center">
+					<img src="hardware.excalidraw.png" />
+				</div>
 				<aside class="notes">
 					Contexte technique : pas d'internet fixe. Du courant. Un TPE qui a besoin d'internet via de
 					l'ethernet.
