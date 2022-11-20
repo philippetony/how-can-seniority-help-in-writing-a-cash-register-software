@@ -79,6 +79,22 @@
 			font-size: 10pt;
 		}
 
+		.overlay{
+			position: absolute;
+			top: 10%;
+			left:10%;
+			right: 10%;
+			z-index: 1;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.overlay > *{
+			grid-column: 1;
+			grid-row: 1 ;
+			border: 20px solid #191919;
+		}
+		
+
 	</style>
 </head>
 
@@ -159,6 +175,11 @@
 						<p class="fragment"><span class="big-emoji">💳</span>TPE avec saisie manuelle</p>
 					</div>
 				</div>
+				<div class="overlay">
+					<img src="IMG_20220903_123840_mod.jpg" class="fragment" />
+					<img src="IMG_20220903_151334_mod.jpg" class="fragment" />
+					<img src="IMG_20220903_101905_mod.jpg" class="fragment" />
+				</div>
 			</section>
 			<section data-auto-animate>
 				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
@@ -209,6 +230,9 @@
 					<div class="fragment">Résultat : <br>Formation initiale → 10 min <br /> Succédée par des formations
 						en pair à pair</div>
 				</div>
+				<div class="overlay">
+					<img src="IMG_20220904_125507_mod.jpg" class="fragment" />
+				</div>
 				<aside class="notes">
 					L'objectif est de ne pas avoir de formation poussée. Au total, j'ai passé 10 minutes à "former" mes
 					utilisateurs. Même si j'aime donner des formations, 'idée c'était d'éviter d'avoir trop à en donner
@@ -245,7 +269,7 @@
 									<polygon points="0 0, 10 3.5, 0 7" />
 								</marker>
 							</defs>
-							<text x="0" y="30">✨</text>
+							<text x="0" y="30">🎉</text>
 							<line x1="40" y1="25" x2="100" y2="25" marker-end="url(#arrowhead)" stroke="white" />
 							<text x="120" y="30">🔖v1</text>
 							<text x="52" y="20" style="font-size: 10pt; stroke: none;" class="fragment">3 j.h.</text>
@@ -314,14 +338,14 @@
 					Front React : bcp plus de lignes
 				</aside>
 			</section>
-			<section>
-				<div class="head">Architecture software</div>
+			<section data-auto-animate>
+				<div class="head" data-id="title">Architecture software</div>
 				<div class="flex flex-row justify-center">
 					<img src="architecture.excalidraw.png" />
 				</div>
 			</section>
-			<section>
-				<div class="head">Architecture hardware</div>
+			<section data-auto-animate="">
+				<div class="head" data-id="title">Architecture hardware</div>
 				<div class="flex flex-row justify-center">
 					<img src="hardware.excalidraw.png" />
 				</div>
@@ -336,10 +360,10 @@
 				</aside>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="title">La fonction préparation de commande</div>
+				<div class="head" data-id="slide-title">✨La fonction préparation de commande</div>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="title">La fonction préparation de commande</div>
+				<div class="head" data-id="slide-title">✨La fonction préparation de commande</div>
 				<img src="preparation-commande.excalidraw.png" />
 				<aside class="notes">
 					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une
