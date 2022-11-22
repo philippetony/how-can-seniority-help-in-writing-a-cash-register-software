@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Muli" />
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -75,26 +76,89 @@
 			padding: 2 rem;
 		}
 
-		.small{
+		.small {
 			font-size: 10pt;
 		}
 
-		.overlay{
+		.overlay {
 			position: absolute;
 			top: 10%;
-			left:10%;
+			left: 10%;
 			right: 10%;
 			z-index: 1;
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
 		}
-		.overlay > *{
+
+		.overlay>* {
 			grid-column: 1;
-			grid-row: 1 ;
+			grid-row: 1;
 			border: 20px solid #191919;
 		}
-		
 
+		img.avatar {
+			max-height: 15rem;
+		}
+
+		.waviy,
+		.waviy5,
+		.waviy-static {
+			position: relative;
+			-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+			font-size: 60px;
+		}
+
+		.waviy span {
+			position: relative;
+			display: inline-block;
+			color: #fff;
+			text-transform: uppercase;
+			animation: waviy 1s infinite;
+			animation-delay: calc(.1s * var(--i));
+
+		}
+
+		.waviy span:last-child {
+			animation: waviy2 1s infinite;
+		}
+
+		.waviy5 span {
+			position: relative;
+			display: inline-block;
+			color: #fff;
+			animation: waviy 1s infinite;
+			animation-delay: calc(.1s * var(--i));
+		}
+
+		@keyframes waviy {
+
+			0%,
+			40%,
+			100% {
+				transform: translateY(0)
+			}
+
+			20% {
+				transform: translateY(-20px)
+			}
+		}
+
+		@keyframes waviy2 {
+
+			0%,
+			40%,
+			100% {
+				transform: translateY(0)
+			}
+
+			20% {
+				transform: translateY(-60px) rotate(180deg)
+			}
+
+			39.9% {
+				transform: translateY(10px) rotate(360deg)
+			}
+		}
 	</style>
 </head>
 
@@ -115,7 +179,8 @@
 						<line x1="160" y1="105" x2="268" y2="82" style="stroke: white;" />
 					</svg>
 					<divv>
-						<div class="p-8 flex flex-row items-center justify-center gap-12 headers" style="min-width: 340px;">
+						<div class="p-8 flex flex-row items-center justify-center gap-12 headers"
+							style="min-width: 340px;">
 							<div>
 								🐘
 							</div>
@@ -126,7 +191,7 @@
 								<img src="znk2.svg" class="w-32 h-32" />
 							</div>
 							<div class="social">
-								<img src="./philippe.png" />
+								<img src="./philippe.jpg" />
 								<div>
 									<i class="fa-brands fa-twitter"></i> PhilTheTea <br />
 									<i class="fa-brands fa-github"></i> philippetony
@@ -162,12 +227,25 @@
 				<div style="display: flex; flex-direction: row; gap: 3rem; justify-content: center; ">
 					<div>
 						<div class="subhead">Contexte</div>
+						<div class="fragment">Club de Voile<br />
+							<div class="flex flex-row items-center fragment">
+								<img src="cnm.png" style="max-height: 4rem;" />
+								<div style="font-family: Muli; font-size: 70%; margin: 1rem; ">
+									Club Nautique de Mazerolles
+								</div>
+							</div>
+						</div>
 						<p class="fragment">Forum des associations</p>
 						<p class="fragment">Buvette du forum (avec restauration)</p>
 					</div>
+					<div class="overlay">
+						<img src="IMG_20220903_123840_mod.jpg" class="fragment fade-in-then-out	" />
+						<img src="IMG_20220903_151334_mod.jpg" class="fragment fade-in-then-out	" />
+						<img src="IMG_20220903_101905_mod.jpg" class="fragment fade-in-then-out	" />
+					</div>
 					<div>
 						<div class="subhead fragment">Buvette</div>
-						<p class="fragment"><span class="big-emoji">🛒</span>Entre 70 et 100 clients</p>
+						<p class="fragment"><span class="big-emoji">🛒</span>Entre 100 et 150 clients</p>
 						<div class="fragment flex flew-row justify-center items-center gap-2">
 							<img src="./1540364982.svg" style="max-height: 2rem;" />
 							<p>Additions à n'en plus finir</p>
@@ -175,11 +253,7 @@
 						<p class="fragment"><span class="big-emoji">💳</span>TPE avec saisie manuelle</p>
 					</div>
 				</div>
-				<div class="overlay">
-					<img src="IMG_20220903_123840_mod.jpg" class="fragment" />
-					<img src="IMG_20220903_151334_mod.jpg" class="fragment" />
-					<img src="IMG_20220903_101905_mod.jpg" class="fragment" />
-				</div>
+
 			</section>
 			<section data-auto-animate>
 				<div class="mini-head" data-id="main-title">Pourquoi un logiciel de caisse ?</div>
@@ -309,11 +383,14 @@
 					<li class="fragment">
 						Choix de prendre plusieurs technos adaptées à différents besoins :
 						<ul>
-							<li class="fragment">Python → bas niveau + facilité à créer une api REST (pysocket + flask)
+							<li class="fragment"><i class="fa-brands fa-python"></i> Python → bas niveau + facilité à
+								créer une api REST (pysocket + flask)
 							</li>
-							<li class="fragment">PHP → Objectif à long terme d'héberger l'outil sur un hébergement
+							<li class="fragment"><i class="fa-brands fa-php"></i> PHP → Objectif à long terme d'héberger
+								l'outil sur un hébergement
 								mutualisé</li>
-							<li class="fragment">React → <em>parce que, pourquoi pas ?</em></li>
+							<li class="fragment"><i class="fa-brands fa-react"></i> React → <em>parce que, pourquoi pas
+									?</em></li>
 						</ul>
 					</li class="fragment">
 				</ul>
@@ -323,7 +400,7 @@
 				</aside>
 			</section>
 			<section data-auto-animate="">
-				<div class="head" data-id="title">Seniorité rime avec ... juniorité</div>
+				<div class="head" data-id="title">Séniorité rime avec ... juniorité</div>
 				<ul>
 					<li class="fragment">Problème simpliste</li>
 					<img src="database.png" class="fragment" />
@@ -360,10 +437,11 @@
 				</aside>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="slide-title">Le petit ➕<br/><span class="fragment">✨La fonction préparation de commande</span></div>
+				<div class="head" data-id="slide-title">Le petit ➕<br /><span class="fragment">✨La fonction préparation
+						de commande</span></div>
 			</section>
 			<section data-auto-animate>
-				<div class="head" data-id="slide-title">Le petit ➕<br/>✨La fonction préparation de commande</div>
+				<div class="head" data-id="slide-title">Le petit ➕<br />✨La fonction préparation de commande</div>
 				<img src="preparation-commande.excalidraw.png" />
 				<aside class="notes">
 					Dans le "rush", une personne à la prise de commande, 1 aux boissons, 1 ou 2 par billig. Et une
@@ -436,19 +514,44 @@
 					Documenter les branchements.
 				</aside>
 			</section>
-			<section data-auto-animate>
-				<section data-auto-animate>
-					<h1>Questions ?</h1>
-					<aside class="notes"></aside>
-				</section>
+			<section data-transition="fade">
+				<div class="waviy-static">
+					<span style="--i:1">Q</span>
+					<span style="--i:2">U</span>
+					<span style="--i:3">E</span>
+					<span style="--i:4">S</span>
+					<span style="--i:5">T</span>
+					<span style="--i:6">I</span>
+					<span style="--i:7">O</span>
+					<span style="--i:8">N</span>
+					<span style="--i:9">S</span>
+					<span style="--i:10">?</span>
+				</div>
+			</section>
+			<section data-transition="none">
+				<div class="waviy">
+					<span style="--i:1">Q</span>
+					<span style="--i:2">U</span>
+					<span style="--i:3">E</span>
+					<span style="--i:4">S</span>
+					<span style="--i:5">T</span>
+					<span style="--i:6">I</span>
+					<span style="--i:7">O</span>
+					<span style="--i:8">N</span>
+					<span style="--i:9">S</span>
+					<span style="--i:10">?</span>
+				</div>
 				<aside class="notes"></aside>
 			</section>
 			<section>
-				<h2 style="text-transform: none;">Merci</h2>
+				<h2 style="text-transform: none;">
+					Merci
+				</h2>
 				<div style="display:flex; flex-direction: row; align-content: space-between; align-items: center;">
 					<div
 						style="display:flex; flex-direction: column; align-content: flex-start; align-items: center; flex:1;">
-						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" src="philippe.png" />
+						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" class="avatar"
+							src="philippe.jpg" />
 						<p class="text-2xl">Philippe TONY</p>
 						<p class="text-xl"><i class="fab fa-github"></i>philippetony<br /><i
 								class="fa-brands fa-twitter"></i>PhilTheTea</p>
@@ -457,16 +560,18 @@
 					<div style="display:flex; flex-direction: column; align-items: center; flex:1; font-size: 50%;">
 
 						<!-- <div style="border-bottom: 3px solid #333; align-self: stretch; margin: 1em;"></div> -->
+						<img src="cnm.png" style="max-height:7rem;" />
+						Club Nautique de Mazerolles
+						<br />
+						https://cnmaz.fr
+
+
 						<p>
 							Slides :
-						</p>
-						<div class="bg-white" style="flex:auto; padding: 0.3em;">
-							<span id="qrcode" class="no-border"></span>
-						</div>
-						<p style="font-size: 80%;">
+							<br />
 							https://github.com/philippetony/how-can-seniority-help-in-writing-a-cash-register-software
 						</p>
-						<script>
+						<!-- <script>
 							new QRCode(document.getElementById("qrcode"), {
 								colorLight: '#fff',
 								colorDark: '#191919',
@@ -474,7 +579,7 @@
 								width: 256,
 								text: "https://github.com/philippetony/how-can-seniority-help-in-writing-a-cash-register-software"
 							});
-						</script>
+						</script> -->
 					</div>
 				</div>
 				<aside class="notes"></aside>
